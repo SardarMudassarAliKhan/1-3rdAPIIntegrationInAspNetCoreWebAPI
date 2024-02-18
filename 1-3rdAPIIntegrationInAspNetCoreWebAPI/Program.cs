@@ -1,6 +1,10 @@
+using _1_3rdAPIIntegrationInAspNetCoreWebAPI.Interfaces;
+using _1_3rdAPIIntegrationInAspNetCoreWebAPI.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddSingleton<IProducts, ProductService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
